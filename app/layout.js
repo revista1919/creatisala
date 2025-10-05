@@ -51,7 +51,7 @@ export default function RootLayout({ children }) {
               <div className="flex justify-center w-full md:w-auto">
                 <Link href="/">
                   <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                    <Image src="/logo.png" alt="Creatisala Logo" width={160} height={40} priority />
+                    <Image src="/logoC.png" alt="Creatisala Logo" width={160} height={40} priority />
                   </motion.div>
                 </Link>
               </div>
