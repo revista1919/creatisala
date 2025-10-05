@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <section className="text-center animate-slideUp">
+    <section className="text-center animate-slideUp bg-gray-100">
       <h1 className="text-5xl mb-6 text-primary bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
         La Creatisala: Un Refugio Creativo para la Música
       </h1>

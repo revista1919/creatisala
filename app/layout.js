@@ -13,7 +13,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
-      <body className={inter.className}>
+      <body className={`${inter.className} bg-gray-100`}>
         <header className="bg-gradient-to-r from-primary to-secondary text-white py-6 shadow-lg">
           <div className="container mx-auto flex justify-between items-center px-4">
             <Link href="/">
