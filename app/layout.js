@@ -1,7 +1,6 @@
 "use client";
 import './globals.css';
 import { Open_Sans } from 'next/font/google';
-import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
@@ -50,11 +49,7 @@ export default function RootLayout({ children }) {
             transition={{ duration: 0.8, ease: 'easeOut' }}
           >
             <div className="container mx-auto flex justify-between items-center px-4 md:px-6">
-              <Link href="/">
-                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                  <Image src="/logoCT.png" alt="La Creati Sala Logo" width={140} height={40} priority />
-                </motion.div>
-              </Link>
+              {/* Removed logo from navbar to match the screenshot */}
               <nav className="hidden md:flex">
                 <ul className="flex space-x-4 md:space-x-6 text-sm md:text-base items-center">
                   <motion.li initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.2 }}>
@@ -122,7 +117,7 @@ export default function RootLayout({ children }) {
             )}
           </motion.header>
           <motion.main
-            className="container mx-auto px-4 py-8 md:py-12 flex-grow"
+            className="flex-grow"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
