@@ -8,18 +8,16 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#312E81',      // Deeper Indigo for seriousness
-        'primary-dark': '#1E1B4B',
-        secondary: '#6D28D9',    // Vibrant Purple for creativity
-        accent: '#FACC15',       // Warm Amber for accents
+        primary: '#155665',      // Client-specified background color
+        'primary-dark': '#0D3A4A',
+        secondary: '#6D28D9',    // Kept for gradients/creativity
+        accent: '#FACC15',       // Kept for accents/buttons
         'accent-dark': '#B45309',
-        'base-100': '#F3F4F6',   // Light Gray for modern clean look
-        'base-content': '#1F2937', // Deep Gray for text
+        'base-100': '#FFFFFF',   // White for clean sections
+        'base-content': '#1F2937', // Dark gray for text on light bg
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-        display: ['Playfair Display', 'serif'],
-        dancing: ['Dancing Script', 'cursive'],
+        sans: ['Open Sans', 'sans-serif'],
       },
       animation: {
         'fade-in-down': 'fade-in-down 0.8s ease-out',

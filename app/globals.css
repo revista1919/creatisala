@@ -4,13 +4,17 @@
 
 @layer base {
   :root {
-    --font-inter: 'Inter', sans-serif;
-    --font-playfair: 'Playfair Display', serif;
-    --font-dancing: 'Dancing Script', cursive;
+    --font-open-sans: 'Open Sans', sans-serif;
+    --color-primary: #155665;    /* Client-specified */
+    --color-secondary: #6D28D9;  /* Kept */
+    --color-accent: #FACC15;     /* Kept */
+    --color-highlight: #E76F51;  /* Kept */
+    --color-base-100: #FFFFFF; /* White for clean look */
   }
 
   body {
     @apply bg-base-100 text-base-content;
+    font-family: var(--font-open-sans);
   }
 
   section {
@@ -18,15 +22,9 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display;
-  }
-
-  .font-display {
-    font-family: var(--font-playfair);
-  }
-
-  .font-dancing {
-    font-family: var(--font-dancing);
+    @apply text-primary;
+    font-family: var(--font-open-sans);
+    font-weight: 700;
   }
 
   /* Custom Animations */
