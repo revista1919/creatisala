@@ -1,10 +1,37 @@
 export default function Contacto() {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const formData = new FormData(form);
+    const data = {
+      nombre: formData.get('nombre'),
+      email: formData.get('email'),
+      telefono: formData.get('telefono'),
+      motivo: formData.get('motivo'),
+    };
+
+    try {
+      await fetch('https://script.google.com/macros/s/AKfycbxWM6YaRjxFICw9tt-sMOB4g4EVxMuquyLfDKkVqpmDYm4vHGHBuAhhOlTWLiWAUBXZgw/exec', {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: new URLSearchParams(data),
+      });
+      alert('Formulario enviado exitosamente!');
+      form.reset();
+    } catch (error) {
+      console.error('Error al enviar el formulario:', error);
+      alert('Hubo un error al enviar el formulario.');
+    }
+  };
+
   return (
     <section className="animate-slideUp">
       <h2 className="text-4xl mb-8 text-center text-secondary">Contacto</h2>
       <form 
-        action="https://script.google.com/macros/s/TU_SCRIPT_ID/exec" 
-        method="POST" 
+        onSubmit={handleSubmit}
         className="max-w-md mx-auto bg-white p-8 rounded-lg shadow-md"
       >
         <div className="mb-4">
