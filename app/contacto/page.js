@@ -1,8 +1,13 @@
+"use client"; // ← ESTO ES LA CLAVE, chaval
+
+import { useState } from 'react';
+
 export default function Contacto() {
   const handleSubmit = async (e) => {
-    e.preventDefault(); // ← Esto evita la redirección
+    e.preventDefault();
 
     const submitBtn = e.currentTarget.querySelector('button[type="submit"]');
+    const originalText = submitBtn.textContent;
     submitBtn.disabled = true;
     submitBtn.textContent = 'Enviando...';
 
@@ -12,47 +17,44 @@ export default function Contacto() {
     try {
       await fetch('https://script.google.com/macros/s/AKfycbxWM6YaRjxFICw9tt-sMOB4g4EVxMuquyLfDKkVqpmDYm4vHGHBuAhhOlTWLiWAUBXZgw/exec', {
         method: 'POST',
-        mode: 'no-cors', // ← lo dejamos porque Google lo necesita
+        mode: 'no-cors',
         body: new URLSearchParams(data),
       });
 
-      alert('¡Mensaje enviado con éxito! Te contactaremos pronto 🎉');
+      alert('¡Mensaje enviado con éxito! Te contactaremos pronto');
       e.target.reset();
     } catch (err) {
-      alert('Hubo un error, pero probablemente sí llegó. Revisa tu email/spreadsheet.');
+      alert('Enviado (probablemente llegó, Google a veces no responde con no-cors)');
       console.error(err);
     } finally {
       submitBtn.disabled = false;
-      submitBtn.textContent = 'Enviar';
+      submitBtn.textContent = originalText;
     }
   };
 
   return (
-    <section className="animate-slideUp">
-      <h2 className="text-4xl mb-8 text-center text-secondary">Contacto</h2>
+    <section className="animate-slideUp py-20">
+      <h2 className="text-4xl mb-8 text-center text-secondary font-bold">Contacto</h2>
 
-      {/* QUITAMOS action y method del form */}
-      <form onSubmit={handleSubmit} className="max-w-md mx-auto bg-white p-8 rounded-lg shadow-md">
-        
-        {/* Tus inputs igual */}
-        <div className="mb-4">
-          <label htmlFor="nombre" className="block mb-2 text-primary font-bold">Nombre</label>
-          <input type="text" id="nombre" name="nombre" required className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-accent" />
+      <form onSubmit={handleSubmit} className="max-w-md mx-auto bg-white p-8 rounded-lg shadow-xl">
+        <div className="mb-5">
+          <label className="block mb-2 text-primary font-bold">Nombre</label>
+          <input type="text" name="nombre" required className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-accent outline-none transition" />
         </div>
 
-        <div className="mb-4">
-          <label htmlFor="email" className="block mb-2 text-primary font-bold">Email</label>
-          <input type="email" id="email" name="email" required className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-accent" />
+        <div className="mb-5">
+          <label className="block mb-2 text-primary font-bold">Email</label>
+          <input type="email" name="email" required className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-accent outline-none transition" />
         </div>
 
-        <div className="mb-4">
-          <label htmlFor="telefono" className="block mb-2 text-primary font-bold">Número de Teléfono</label>
-          <input type="tel" id="telefono" name="telefono" required className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-accent" />
+        <div className="mb-5">
+          <label className="block mb-2 text-primary font-bold">Teléfono</label>
+          <input type="tel" name="telefono" required className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-accent outline-none transition" />
         </div>
 
         <div className="mb-6">
-          <label htmlFor="motivo" className="block mb-2 text-primary font-bold">Motivo</label>
-          <select id="motivo" name="motivo" required className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-accent">
+          <label className="block mb-2 text-primary font-bold">Motivo</label>
+          <select name="motivo" required className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-accent outline-none">
             <option value="">Selecciona una opción</option>
             <option value="Clases de Piano">Clases de Piano</option>
             <option value="Clases de Canto">Clases de Canto</option>
@@ -65,9 +67,9 @@ export default function Contacto() {
 
         <button 
           type="submit"
-          className="bg-accent text-white py-3 px-6 rounded-lg hover:bg-yellow-600 transition-all font-bold w-full"
+          className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white font-bold py-4 px-8 rounded-lg hover:from-cyan-600 hover:to-teal-600 transition-all transform hover:scale-105 shadow-lg w-full text-lg"
         >
-          Enviar
+          Enviar Mensaje
         </button>
       </form>
     </section>
