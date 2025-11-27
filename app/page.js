@@ -37,14 +37,13 @@ const subtleReveal = {
 export default function Home() {
   return (
     <div className="space-y-24">
-      {/* Hero Section with background image filling the entire viewport height without borders or distortion */}
+      {/* Hero Section */}
       <motion.section
         className="relative h-screen bg-[url('/creatisala/Home.jpeg')] bg-cover bg-center overflow-hidden"
         variants={fadeInDown}
         initial="initial"
         animate="animate"
       >
-        {/* Logo overlaid on the left side */}
         <img 
           src="/creatisala/logoCT.png" 
           alt="La Creati Sala Logo" 
@@ -52,16 +51,19 @@ export default function Home() {
         />
       </motion.section>
 
-      {/* Services Overview - Wrapped in container */}
+      {/* Services Overview */}
       <div className="container mx-auto px-4">
         <motion.section
           variants={fadeInUp}
           initial="initial"
           animate="animate"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">Lo que Ofrecemos</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">
+            Lo que Ofrecemos
+          </h2>
+
           <div className="grid md:grid-cols-3 gap-8 md:gap-10">
-            {/* Service Card 1 */}
+            {/* Card 1 */}
             <motion.div
               className="bg-base-100 p-6 md:p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 border border-secondary/20"
               variants={fadeInLeft}
@@ -73,7 +75,8 @@ export default function Home() {
                 Espacios acústicamente tratados y equipados para que tu banda suene mejor que nunca.
               </p>
             </motion.div>
-            {/* Service Card 2 */}
+
+            {/* Card 2 */}
             <motion.div
               className="bg-base-100 p-6 md:p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 border border-secondary/20"
               variants={fadeInUp}
@@ -85,7 +88,8 @@ export default function Home() {
                 Grabación, mezcla y masterización con equipo de alta gama y la asistencia de nuestros ingenieros.
               </p>
             </motion.div>
-            {/* Service Card 3 */}
+
+            {/* Card 3 */}
             <motion.div
               className="bg-base-100 p-6 md:p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 border border-secondary/20"
               variants={fadeInRight}
@@ -101,23 +105,30 @@ export default function Home() {
         </motion.section>
       </div>
 
-      {/* Call to Action - Wrapped in container */}
-<div className="container mx-auto px-4">
-<motion.section
-className="bg-gradient-to-r from-primary to-secondary text-[#e6e1d8] text-center py-16 md:py-20 rounded-lg"
-variants={subtleReveal}
-initial="initial"
-animate="animate"
->
-<h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">¿Listo para darle vida a tu música?</h2>
-<p className="text-lg md:text-xl max-w-xl md:max-w-2xl mx-auto mb-8 opacity-90">
-Ponte en contacto con nosotros hoy mismo para reservar una sala o para hablar sobre tu próximo proyecto.
-</p>
-<Link href="/contacto" className="bg-accent text-primary px-8 md:px-10 py-3 md:py-4 rounded-lg text-lg md:text-xl font-semibold hover:bg-accent-dark transition-all duration-300 shadow-lg">
-Contáctanos
-</Link>
-</motion.section>
-</div>
-</div>
-);
+      {/* Call to Action */}
+      <div className="container mx-auto px-4">
+        <motion.section
+          className="bg-primary text-center py-16 md:py-20 rounded-lg"
+          variants={subtleReveal}
+          initial="initial"
+          animate="animate"
+        >
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+            ¿Listo para darle vida a tu música?
+          </h2>
+
+          <p className="text-lg md:text-xl max-w-xl md:max-w-2xl mx-auto mb-8 opacity-90 text-white">
+            Ponte en contacto con nosotros hoy mismo para reservar una sala o para hablar sobre tu próximo proyecto.
+          </p>
+
+          <Link
+            href="/contacto"
+            className="bg-accent text-primary px-8 md:px-10 py-3 md:py-4 rounded-lg text-lg md:text-xl font-semibold hover:bg-accent-dark transition-all duration-300 shadow-lg"
+          >
+            Contáctanos
+          </Link>
+        </motion.section>
+      </div>
+    </div>
+  );
 }
