@@ -137,7 +137,7 @@ export default function RootLayout({ children }) {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
               >
-                <h3 className="text-xl font-semibold mb-4">La Creati Sala</h3>
+                <h3 className="text-xl font-semibold mb-4">La Creatisala</h3>
                 <p className="text-accent">Un espacio inspirador para la grabación, ensayo y producción musical.</p>
               </motion.div>
               <motion.div
@@ -170,7 +170,7 @@ export default function RootLayout({ children }) {
               </motion.div>
             </div>
             <div className="container mx-auto text-center border-t border-accent/50 mt-8 pt-6">
-              <p className="text-accent">&copy; {new Date().getFullYear()} La Creati Sala. Todos los derechos reservados.</p>
+              <p className="text-accent">&copy; {new Date().getFullYear()} La Creatisala. Todos los derechos reservados.</p>
             </div>
           </motion.footer>
         </ErrorBoundary>

@@ -46,7 +46,7 @@ export default function Home() {
       >
         <img 
           src="/creatisala/logoCT.png" 
-          alt="La Creati Sala Logo" 
+          alt="La Creatisala Logo" 
           className="absolute left-4 md:left-10 top-1/4 w-40 md:w-64 opacity-90"
         />
       </motion.section>
