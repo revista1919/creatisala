@@ -39,13 +39,13 @@ export default function Home() {
     <div className="space-y-24">
       {/* Hero Section */}
       <motion.section
-        className="relative h-screen bg-[url('/creatisala/Home.jpeg')] bg-cover bg-center overflow-hidden"
+        className="relative h-screen bg-[url('/Home.jpeg')] bg-cover bg-center overflow-hidden"
         variants={fadeInDown}
         initial="initial"
         animate="animate"
       >
         <img 
-          src="/creatisala/logoCT.png" 
+          src="/logoCT.png" 
           alt="La Creatisala Logo" 
           className="absolute left-4 md:left-10 top-1/4 w-40 md:w-64 opacity-90"
         />
