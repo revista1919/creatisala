@@ -53,70 +53,70 @@ export default function Home() {
 
       {/* Services Overview */}
       <div className="container mx-auto px-4">
-  <motion.section
-    variants={fadeInUp}
-    initial="initial"
-    animate="animate"
-  >
-    <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">
-      Lo que Ofrecemos
-    </h2>
+        <motion.section
+          variants={fadeInUp}
+          initial="initial"
+          animate="animate"
+        >
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">
+            Lo que Ofrecemos
+          </h2>
 
-    <div className="grid md:grid-cols-4 gap-8 md:gap-10">
-      {/* Card 1 */}
-      <motion.div
-        className="bg-base-100 p-6 md:p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 border border-secondary/20"
-        variants={fadeInLeft}
-        initial="initial"
-        animate="animate"
-      >
-        <h3 className="text-xl md:text-2xl font-bold mb-3 text-primary">Salas de Ensayo</h3>
-        <p className="text-base-content opacity-80">
-          Espacios acústicamente tratados y equipados para que tu banda suene mejor que nunca.
-        </p>
-      </motion.div>
+          <div className="grid md:grid-cols-4 gap-8 md:gap-10">
+            {/* Card 1 */}
+            <motion.div
+              className="bg-base-100 p-6 md:p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 border border-secondary/20"
+              variants={fadeInLeft}
+              initial="initial"
+              animate="animate"
+            >
+              <h3 className="text-xl md:text-2xl font-bold mb-3 text-primary">Salas de Ensayo</h3>
+              <p className="text-base-content opacity-80">
+                Espacios acústicamente tratados y equipados para que tu banda suene mejor que nunca.
+              </p>
+            </motion.div>
 
-      {/* Card 2 */}
-      <motion.div
-        className="bg-base-100 p-6 md:p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 border border-secondary/20"
-        variants={fadeInUp}
-        initial="initial"
-        animate="animate"
-      >
-        <h3 className="text-xl md:text-2xl font-bold mb-3 text-primary">Estudio de Grabación</h3>
-        <p className="text-base-content opacity-80">
-          Grabación, mezcla y masterización con equipo de alta gama y la asistencia de nuestros ingenieros.
-        </p>
-      </motion.div>
+            {/* Card 2 */}
+            <motion.div
+              className="bg-base-100 p-6 md:p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 border border-secondary/20"
+              variants={fadeInUp}
+              initial="initial"
+              animate="animate"
+            >
+              <h3 className="text-xl md:text-2xl font-bold mb-3 text-primary">Estudio de Grabación</h3>
+              <p className="text-base-content opacity-80">
+                Grabación, mezcla y masterización con equipo de alta gama y la asistencia de nuestros ingenieros.
+              </p>
+            </motion.div>
 
-      {/* Card 3 */}
-      <motion.div
-        className="bg-base-100 p-6 md:p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 border border-secondary/20"
-        variants={fadeInRight}
-        initial="initial"
-        animate="animate"
-      >
-        <h3 className="text-xl md:text-2xl font-bold mb-3 text-primary">Producción Musical</h3>
-        <p className="text-base-content opacity-80">
-          Te ayudamos a dar forma a tus ideas, desde la composición inicial hasta el producto final.
-        </p>
-      </motion.div>
+            {/* Card 3 */}
+            <motion.div
+              className="bg-base-100 p-6 md:p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 border border-secondary/20"
+              variants={fadeInRight}
+              initial="initial"
+              animate="animate"
+            >
+              <h3 className="text-xl md:text-2xl font-bold mb-3 text-primary">Producción Musical</h3>
+              <p className="text-base-content opacity-80">
+                Te ayudamos a dar forma a tus ideas, desde la composición inicial hasta el producto final.
+              </p>
+            </motion.div>
 
-      {/* Card 4 – NUEVA */}
-      <motion.div
-        className="bg-base-100 p-6 md:p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 border border-secondary/20"
-        variants={fadeInUp}
-        initial="initial"
-        animate="animate"
-      >
-        <h3 className="text-xl md:text-2xl font-bold mb-3 text-primary">Clases de Música</h3>
-        <p className="text-base-content opacity-80">
-          Aprende guitarra, bajo, batería, piano, canto y más, con profesores expertos y planes personalizados.
-        </p>
-      </motion.div>
-    </div>
-  </motion.section>
-</div>
+            {/* Card 4 – NUEVA */}
+            <motion.div
+              className="bg-base-100 p-6 md:p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 border border-secondary/20"
+              variants={fadeInUp}
+              initial="initial"
+              animate="animate"
+            >
+              <h3 className="text-xl md:text-2xl font-bold mb-3 text-primary">Clases de Música</h3>
+              <p className="text-base-content opacity-80">
+                Aprende guitarra, bajo, batería, piano, canto y más, con profesores expertos y planes personalizados.
+              </p>
+            </motion.div>
+          </div>
+        </motion.section>
+      </div>
 
       {/* Call to Action */}
       <div className="container mx-auto px-4">
