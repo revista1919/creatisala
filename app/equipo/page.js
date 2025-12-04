@@ -10,19 +10,19 @@ export default function Equipo() {
             name: 'Ari Montiel',
             role: 'Fundador y CEO de La Creatisala',
             desc: 'Vocal coach, Productor Musical y Multi instrumentista.',
-            // img: '/ari.jpg',
+            img: '/ari.jpg',
           },
           {
             name: 'Yan Lazcano',
             role: 'Co Fundador',
             desc: 'Pianista y Productor Musical.',
-            // img: '/yan.jpg',
+            img: '/yan.jpg',
           },
           {
             name: 'Brian Ovalle',
             role: 'Co Fundador',
             desc: 'Baterista.',
-            // img: '/brian.jpg',
+            img: '/brian.jpg',
           },
         ].map((member, index) => (
           <div key={index} className="bg-white p-6 rounded-lg shadow-md text-center hover:shadow-xl transition-shadow">
