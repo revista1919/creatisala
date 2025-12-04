@@ -2,11 +2,45 @@
 
 import Image from 'next/image';
 import { useState, useEffect, useRef } from 'react';
-import { ZoomIn, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 // ------------------------------
-// Importación de imágenes
+// Íconos SVG (reemplazo de Lucide)
+// ------------------------------
+const ZoomIn = ({ className }) => (
+  <svg
+    className={className}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <circle cx="11" cy="11" r="8" />
+    <line x1="21" y1="21" x2="16.65" y2="16.65" />
+    <line x1="11" y1="8" x2="11" y2="14" />
+    <line x1="8" y1="11" x2="14" y2="11" />
+  </svg>
+);
+
+const X = ({ className }) => (
+  <svg
+    className={className}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <line x1="18" y1="6" x2="6" y2="18" />
+    <line x1="6" y1="6" x2="18" y2="18" />
+  </svg>
+);
+
+// ------------------------------
+// Importación automática de fotos
 // ------------------------------
 const importAllImages = () => {
   const context = require.context('../../public/fotos', false, /\.(png|jpe?g|webp|gif|avif)$/);
@@ -27,11 +61,12 @@ const importAllImages = () => {
 const allPhotos = importAllImages();
 
 // ------------------------------
-// Componente
+// Componente principal
 // ------------------------------
 export default function Galeria() {
   const [displayedPhotos, setDisplayedPhotos] = useState([]);
   const [selectedIndex, setSelectedIndex] = useState(null);
+
   const [touchStart, setTouchStart] = useState(null);
   const [touchEnd, setTouchEnd] = useState(null);
 
@@ -69,6 +104,7 @@ export default function Galeria() {
 
   const navigate = (dir) => {
     if (selectedIndex === null) return;
+
     setSelectedIndex((i) =>
       dir === 'next'
         ? (i + 1) % allPhotos.length
@@ -90,7 +126,7 @@ export default function Galeria() {
     return () => window.removeEventListener('keydown', handleKey);
   }, [selectedIndex]);
 
-  // Swipe navigation (mobile)
+  // Swipe navigation
   const minSwipeDistance = 50;
 
   const onTouchStart = (e) => setTouchStart(e.targetTouches[0].clientX);
@@ -144,7 +180,7 @@ export default function Galeria() {
         ))}
       </div>
 
-      {/* CARGA INFINITA */}
+      {/* Infinite scroll loader */}
       {displayedPhotos.length < allPhotos.length && (
         <div ref={sentinelRef} className="col-span-full py-12 text-center">
           <div className="inline-flex items-center gap-3 text-cyan-400">
@@ -156,7 +192,7 @@ export default function Galeria() {
         </div>
       )}
 
-      {/* LIGHTBOX PREMIUM */}
+      {/* LIGHTBOX */}
       <AnimatePresence>
         {selectedIndex !== null && (
           <motion.div
@@ -170,7 +206,7 @@ export default function Galeria() {
             onTouchMove={onTouchMove}
             onTouchEnd={onTouchEnd}
           >
-            {/* Cerrar */}
+            {/* Botón cerrar */}
             <button
               onClick={closeLightbox}
               className="absolute top-6 right-6 text-white hover:text-cyan-400 transition z-10"
@@ -193,7 +229,7 @@ export default function Galeria() {
               ›
             </button>
 
-            {/* Imagen con animación */}
+            {/* Imagen */}
             <motion.div
               className="relative max-w-5xl max-h-full p-8"
               initial={{ scale: 0.85, opacity: 0 }}
