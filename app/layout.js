@@ -4,14 +4,12 @@ import { Open_Sans } from 'next/font/google';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
-
 // Font configuration
 const openSans = Open_Sans({
   subsets: ['latin'],
   weight: ['400', '700'],
   variable: '--font-open-sans',
 });
-
 // Error Boundary Component
 function ErrorBoundary({ children }) {
   const [hasError, setHasError] = useState(false);
@@ -30,14 +28,11 @@ function ErrorBoundary({ children }) {
   }
   return children;
 }
-
 export default function RootLayout({ children }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-
   return (
     <html lang="es">
       <body className={`${openSans.variable} font-sans min-h-screen flex flex-col bg-base-100`}>
@@ -161,9 +156,9 @@ export default function RootLayout({ children }) {
               >
                 <h3 className="text-xl font-semibold mb-4">Síguenos</h3>
                 <div className="flex justify-center md:justify-start space-x-4">
-                  <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-accent">
+                  <a href="https://www.instagram.com/lacreatisala/" target="_blank" rel="noopener noreferrer" className="hover:text-accent">
                     <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M12 2.04c-5.5 0-9.96 4.46-9.96 9.96 0 4.95 3.62 9.06 8.36 9.83v-6.95h-2.51v-2.88h2.51v-2.2c0-2.47 1.5-3.82 3.7-3.82 1.05 0 1.95.08 2.21.11v2.56h-1.52c-1.19 0-1.42.57-1.42 1.4v1.84h2.84l-.37 2.88h-2.47v6.95c4.74-.77 8.36-4.88 8.36-9.83 0-5.5-4.46-9.96-9.96-9.96z" />
+                      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.336 3.608 1.311.975.975 1.249 2.242 1.311 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.336 2.633-1.311 3.608-.975.975-2.242 1.249-3.608 1.311-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.336-3.608-1.311-.975-.975-1.249-2.242-1.311-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.336-2.633 1.311-3.608.975-.975 2.242-1.249 3.608-1.311 1.266-.058 1.646-.07 4.85-.07zm0-2.163c-3.259 0-3.67.014-4.947.072-1.525.069-2.877.367-3.914 1.404-1.037 1.037-1.335 2.389-1.404 3.914-.058 1.277-.072 1.688-.072 4.947s.014 3.67.072 4.947c.069 1.525.367 2.877 1.404 3.914 1.037 1.037 2.389 1.335 3.914 1.404 1.277.058 1.688.072 4.947.072s3.67-.014 4.947-.072c1.525-.069 2.877-.367 3.914-1.404 1.037-1.037 1.335-2.389 1.404-3.914.058-1.277.072-1.688.072-4.947s-.014-3.67-.072-4.947c-.069-1.525-.367-2.877-1.404-3.914-1.037-1.037-2.389-1.335-3.914-1.404-1.277-.058-1.688-.072-4.947-.072zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.209-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.441s.645 1.441 1.441 1.441c.795 0 1.439-.645 1.439-1.441s-.644-1.441-1.439-1.441z" />
                     </svg>
                   </a>
                 </div>
