@@ -30,7 +30,7 @@ export default function Equipo() {
             <p className="text-lg mb-2">{member.role}</p>
             <p>{member.desc}</p>
             {/* Descomenta si tienes imágenes */}
-            {/* {member.img && <Image src={member.img} alt={member.name} width={200} height={200} className="mx-auto rounded-full mt-4" />} */}
+            {member.img && <Image src={member.img} alt={member.name} width={200} height={200} className="mx-auto rounded-full mt-4" />} */
           </div>
         ))}
       </div>

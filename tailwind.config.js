@@ -10,7 +10,7 @@ module.exports = {
       colors: {
         primary: '#155665',      // Client-specified background color
         'primary-dark': '#0D3A4A',
-        secondary: '#6D28D9',    // Kept for gradients/creativity
+        secondary: '#09313fff',    // Kept for gradients/creativity
         accent: '#FACC15',       // Kept for accents/buttons
         'accent-dark': '#B45309',
         'base-100': '#FFFFFF',   // White for clean sections
