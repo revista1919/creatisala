@@ -12,7 +12,7 @@ export default function Galeria() {
 
   return (
     <section className="max-w-7xl mx-auto px-4 py-12 bg-black/20">
-      <h1 className="text-5xl font-extrabold mb-12 text-center text-purple-400 tracking-tight">
+      <h1 className="text-5xl font-extrabold mb-12 text-center text-cyan-900 tracking-tight">
         Galería
       </h1>
 
