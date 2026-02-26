@@ -224,7 +224,7 @@ export default function RootLayout({ children }) {
                 </div>
                 <div className="text-left md:text-right">
                   <p className="font-playfair italic text-lg text-primary">contact@lacreatisala.com</p>
-                  <p className="text-xs tracking-widest opacity-60 text-primary">SANTIAGO, CHILE</p>
+                  <p className="text-xs tracking-widest opacity-60 text-primary">San Martín 10, 2171807 San Felipe, Valparaíso</p>
                 </div>
               </div>
 
