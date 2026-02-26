@@ -180,11 +180,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="py-8 border-t border-primary/10">
-        <div className="container mx-auto px-6 text-center text-slate-500 text-sm">
-          <p>© 2024 La Creatisala · Hecho por músicos, para músicos</p>
-        </div>
-      </footer>
+      
     </main>
   );
 }
