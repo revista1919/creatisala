@@ -91,9 +91,6 @@ export default function Home() {
           </motion.div>
         </div>
 
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
-          <div className="w-[2px] h-16 bg-gradient-to-b from-primary to-transparent"></div>
-        </div>
       </section>
 
       {/* Servicios */}
