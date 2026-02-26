@@ -174,7 +174,7 @@ export default function Home() {
               href="/contacto"
               className="inline-block bg-primary hover:bg-primary/80 text-white px-10 py-4 rounded-full transition-all duration-300 font-semibold tracking-wide shadow-lg hover:shadow-primary/20 hover:scale-105"
             >
-              Comenzá tu proyecto
+              Comienza tu proyecto
             </Link>
           </motion.div>
         </div>

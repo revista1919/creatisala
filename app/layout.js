@@ -179,7 +179,7 @@ export default function RootLayout({ children }) {
                   Tu música merece <br/> un lugar real.
                 </h3>
                 <p className="text-primary/70 max-w-sm leading-relaxed">
-                  En Creatisala no hacemos "promoción vacía". Creamos el entorno técnico y humano para que tu arte respire.
+                  En La Creatisala creamos el entorno técnico y humano para que tu arte respire.
                 </p>
               </div>
 
@@ -223,7 +223,7 @@ export default function RootLayout({ children }) {
                   <SocialLink href="https://wa.me/tu-numero" label="WHATSAPP" />
                 </div>
                 <div className="text-left md:text-right">
-                  <p className="font-playfair italic text-lg text-primary">hola@lacreatisala.com</p>
+                  <p className="font-playfair italic text-lg text-primary">contact@lacreatisala.com</p>
                   <p className="text-xs tracking-widest opacity-60 text-primary">SANTIAGO, CHILE</p>
                 </div>
               </div>
