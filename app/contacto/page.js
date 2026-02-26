@@ -52,7 +52,7 @@ export default function Contacto() {
             <div className="mt-12 space-y-6">
               <ContactDetail label="Ubicación" value="San Martín 10, 2171807 San Felipe, Valparaíso" />
               <ContactDetail label="Email" value="contact@lacreatisala.com" />
-              <ContactDetail label="WhatsApp" value="+56 9 XXXX XXXX" />
+              <ContactDetail label="WhatsApp" value="+56 9 1019 0158" />
             </div>
           </motion.div>
 
@@ -88,7 +88,7 @@ export default function Contacto() {
                 <input 
                   type="tel" name="telefono" required 
                   className="w-full bg-transparent border-b border-primary/20 py-3 focus:border-primary outline-none transition-colors text-primary font-medium"
-                  placeholder="+56 9 ..."
+                  placeholder="+56 9 1019 0158"
                 />
               </div>
 

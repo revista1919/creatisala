@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 const equipo = [
   {
     name: 'Ari Montiel',
-    role: 'Fundador & CEO',
+    role: 'Fundador & Director',
     bio: 'Fundador de Creatisala. Vocal coach, productor y multiinstrumentista, con formación profesional en piano y canto, especializado en el modelo Estill Voice. Desarrolla además una carrera artística como cantautor, con un EP publicado en 2025 que lo ha llevado a presentarse en diversos escenarios de la escena nacional.',
     img: '/ari.jpg',
     main: true // Para darle un diseño destacado

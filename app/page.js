@@ -1,4 +1,3 @@
-// app/page.js
 "use client";
 
 import Link from 'next/link';
@@ -26,14 +25,16 @@ function ServiceItem({ number, title, description }) {
       className="group cursor-default"
     >
       <div className="flex items-baseline gap-4 mb-2">
-        <span className="text-primary/40 font-mono text-sm tracking-wider">
+        {/* Usamos font-mono para ese look "cuadradito" y técnico */}
+        <span className="text-primary/60 font-mono text-xs tracking-[0.2em] font-bold">
           {number.padStart(2, '0')}
         </span>
-        <h3 className="text-2xl md:text-3xl font-bold text-white group-hover:text-primary transition-colors italic">
+        {/* Quitamos italic y usamos font-black para máxima solidez */}
+        <h3 className="text-2xl md:text-3xl font-black uppercase tracking-tight text-white group-hover:text-primary transition-colors">
           {title}
         </h3>
       </div>
-      <p className="text-slate-400 leading-relaxed font-light pl-8 border-l border-primary/10 group-hover:border-primary/40 transition-all">
+      <p className="text-slate-400 leading-relaxed font-normal pl-8 border-l-2 border-primary/10 group-hover:border-primary transition-all">
         {description}
       </p>
     </motion.div>
@@ -48,10 +49,10 @@ export default function Home() {
         <div className="absolute inset-0 z-0">
           <img 
             src="/Home.jpeg" 
-            className="w-full h-full object-cover scale-105 animate-subtle-zoom" 
+            className="w-full h-full object-cover scale-105" 
             alt="La Creatisala Studio"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0a1215] via-[#0a1215]/80 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0a1215] via-[#0a1215]/90 to-transparent"></div>
           <div className="absolute inset-0 bg-gradient-to-t from-[#0a1215] via-transparent to-transparent"></div>
         </div>
 
@@ -69,13 +70,14 @@ export default function Home() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="max-w-3xl"
+            className="max-w-4xl"
           >
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.1]">
+            {/* Títulos en font-black y tracking-tighter para ese look sólido/cuadrado */}
+            <h1 className="text-5xl md:text-7xl lg:text-9xl font-black text-white leading-[0.9] uppercase tracking-tighter">
               Donde el sonido
               <br />
-              <span className="text-primary italic font-normal">
-                encuentra su lugar.
+              <span className="text-primary">
+                crea su lugar.
               </span>
             </h1>
             
@@ -83,14 +85,13 @@ export default function Home() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-slate-300 text-lg md:text-xl max-w-xl mt-8 font-light"
+              className="text-slate-300 text-lg md:text-xl max-w-xl mt-8 font-medium border-l-4 border-primary pl-6"
             >
               Espacios para ensayar, grabar y crear música con alma. 
               Sin vueltas, solo lo que importa.
             </motion.p>
           </motion.div>
         </div>
-
       </section>
 
       {/* Servicios */}
@@ -106,20 +107,20 @@ export default function Home() {
             <div>
               <motion.span 
                 variants={fadeIn}
-                className="text-accent uppercase tracking-[0.3em] text-sm font-bold block mb-4"
+                className="text-primary uppercase tracking-[0.4em] text-xs font-black block mb-4"
               >
-                · Lo que ofrecemos
+                // Lo que ofrecemos
               </motion.span>
               
               <motion.h2 
                 variants={fadeIn}
-                className="text-white"
+                className="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter leading-none"
               >
-                Espacios y servicios <br />
-                <span className="text-primary italic">para tu música</span>
+                Espacios <br />
+                <span className="text-primary">profesionales</span>
               </motion.h2>
 
-              <div className="space-y-12 mt-12">
+              <div className="space-y-12 mt-16">
                 <ServiceItem
                   number="1"
                   title="Salas de Ensayo"
@@ -133,7 +134,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="lg:mt-24 space-y-12">
+            <div className="lg:mt-32 space-y-12">
               <ServiceItem
                 number="3"
                 title="Producción Musical"
@@ -157,27 +158,25 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="glass-card rounded-3xl p-10 md:p-16 text-center max-w-4xl mx-auto"
+            className="bg-white p-10 md:p-16 text-center max-w-4xl mx-auto"
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 italic">
+            <h2 className="text-3xl md:text-5xl font-black text-black mb-6 uppercase tracking-tighter">
               ¿Listo para darle vida a tu música?
             </h2>
             
-            <p className="text-slate-400 max-w-2xl mx-auto mb-10 text-lg font-light leading-relaxed">
+            <p className="text-slate-600 max-w-2xl mx-auto mb-10 text-lg font-bold">
               Hablemos de tu próximo proyecto. Sin presiones, sin vueltas, solo música.
             </p>
             
             <Link
               href="/contacto"
-              className="inline-block bg-primary hover:bg-primary/80 text-white px-10 py-4 rounded-full transition-all duration-300 font-semibold tracking-wide shadow-lg hover:shadow-primary/20 hover:scale-105"
+              className="inline-block bg-black hover:bg-primary text-white px-12 py-4 transition-all duration-300 font-black uppercase tracking-widest text-sm"
             >
               Comienza tu proyecto
             </Link>
           </motion.div>
         </div>
       </section>
-
-      
     </main>
   );
 }

@@ -220,7 +220,7 @@ export default function RootLayout({ children }) {
                 <h4 className="text-[11px] uppercase tracking-[0.3em] font-black mb-6 opacity-50 text-primary">Conecta</h4>
                 <div className="flex space-x-6 mb-8">
                   <SocialLink href="https://instagram.com/lacreatisala" label="INSTAGRAM" />
-                  <SocialLink href="https://wa.me/tu-numero" label="WHATSAPP" />
+                  <SocialLink href="https://wa.me/+56 9 1019 0158" label="WHATSAPP" />
                 </div>
                 <div className="text-left md:text-right">
                   <p className="font-playfair italic text-lg text-primary">contact@lacreatisala.com</p>
